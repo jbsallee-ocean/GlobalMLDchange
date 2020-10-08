@@ -6,5 +6,5 @@ Codes and dataset information supporting our paper "Fifty-year changes of the wo
 3) Codes to compute local generalised mixed linear regression are in the directory: LocalRegression
 
 Main figures are ploted using the code: MLDtrend_revision_v4.m
-The computed mean and trends of mixed-layer properties and trends can be found here (with DOI): 
+The computed mean and trends of mixed-layer properties and trends can be found here (with DOI): https://doi.org/10.5281/zenodo.4073174
 
