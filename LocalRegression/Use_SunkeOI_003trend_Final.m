@@ -1,5 +1,5 @@
 
-optionFit=4
+optionFit=1
 reverselat=1
 parallel=1
 doKuusela=0
@@ -11,19 +11,13 @@ wod_ctd_data = '/net/ether/data/proteo1/jbslod/Taf/LOCEAN/MLD/Database/Update201
 
 
 FM_fname ='/net/ether/data/proteo1/jbslod/Data/Routine-Matlab/Sunke_OI/SO_Gebco_FM_05.nc';
-if doKuusela==0
+
 	if reverselat==1
 		output_fname = ['/net/ether/data/proteo1/jbslod/Taf/LOCEAN/MLD/Climatology/Update2018/MLD003trend_from' int2str(yeartrendmin) '_Finalnewstd2_rev_Fit' int2str(optionFit) '.nc'];
 	else
 		output_fname = ['/net/ether/data/proteo1/jbslod/Taf/LOCEAN/MLD/Climatology/Update2018/MLD003trend_from' int2str(yeartrendmin) '_Finalnewstd2_Fit' int2str(optionFit) '.nc'];
 	end
-else
-        if reverselat==1
-                output_fname = ['/net/ether/data/proteo1/jbslod/Taf/LOCEAN/MLD/Climatology/Update2018/MLD003trend_from' int2str(yeartrendmin) '_doKuusela_Finalnewstd2_rev_Fit' int2str(optionFit) '.nc'];
-        else 
-                output_fname = ['/net/ether/data/proteo1/jbslod/Taf/LOCEAN/MLD/Climatology/Update2018/MLD003trend_from' int2str(yeartrendmin) '_doKuusela_Finalnewstd2_Fit' int2str(optionFit) '.nc'];
-        end 
-end
+
 Kuusela_fname = ['/net/ether/data/proteo1/jbslod/Taf/LOCEAN/MLD/Climatology/Update2018/MLD003trend_from1970NoIQR_climOnly_KuuselaOA_withError.nc'];
 
 
@@ -37,19 +31,13 @@ AdditionalFields={'NT15','NS15','NS200','NT200','N2200','N215'};
 lon_grid=0:0.5:360; % needs to 0-360 
 lat_grid=-90:0.5:90; 
 
-if doKuusela==0
+
 	if reverselat==1
 		logfile= ['MLDlog_Finalnewstd2_rev_optionFit' int2str(optionFit) '.tmp'];
 	else
 		logfile= ['MLDlog_Finalnewstd2_optionFit' int2str(optionFit) '.tmp'];
 	end
-else
-        if reverselat==1
-                logfile= ['MLDlog_Finalnewstd2_rev_doKuusela_optionFit' int2str(optionFit) '.tmp'];
-        else
-                logfile= ['MLDlog_Finalnewstd2_doKuusela_optionFit' int2str(optionFit) '.tmp'];
-        end
-end
+
 % Misc options: 
 eps100 = 0.0001;
 eps999 = 1 - eps100;
