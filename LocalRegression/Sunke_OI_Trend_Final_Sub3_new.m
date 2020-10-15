@@ -203,10 +203,6 @@ function outSub=Sunke_OI_Trend_Final_Sub3_new(INpara,varINlist,tstep);
                                                             thetadOpt_wmean(tstep) = exp(paramOpt(2)); 
                                                             thetatOpt_wmean(tstep) = exp(paramOpt(3));	 
                                                             sigmaOpt_wmean(tstep) = exp(paramOpt(4));
-                                                            if thetadOpt_wmean(tstep)>1500 thetadOpt_wmean(tstep)=1500; end
-                                                            if thetatOpt_wmean(tstep)>150 thetatOpt_wmean(tstep)=150; end
-                                                            if thetadOpt_wmean(tstep)<10 thetadOpt_wmean(tstep)=10; end
-                                                            if thetatOpt_wmean(tstep)<5 thetatOpt_wmean(tstep)=5; end
                                                             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                             %% END : Kuusala & Stein, 2018 decorrelation scales
                                                             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
